@@ -43,4 +43,8 @@ class Categoria{
         return ejecutarConsulta($sql);
     }
 
+    public function select(){
+        $sql = "SELECT * FROM categoria where  condicion = 1";
+        return ejecutarConsulta($sql);
+    }
 }
