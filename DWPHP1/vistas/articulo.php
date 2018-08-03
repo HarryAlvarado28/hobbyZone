@@ -49,7 +49,7 @@ require 'header.php';
                           </div>
                           <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <label>Categoría(*):</label>
-                            <select id="idcategoria" name="idcategoria" class="form-control selectpicker" data-live-search="true" required></select>
+                              <select id="idcategoria" name="idcategoria" class="form-control selectpicker" data-live-search="true"></select>
                           </div>
                           <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <label>Stock(*):</label>
