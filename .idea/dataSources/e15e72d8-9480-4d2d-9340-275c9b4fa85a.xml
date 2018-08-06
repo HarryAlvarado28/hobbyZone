@@ -1781,151 +1781,156 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="420" parent="334" name="condicion">
+    <column id="420" parent="334" name="imagen">
       <Position>11</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="421" parent="334" name="condicion">
+      <Position>12</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="421" parent="334" name="login_UNIQUE">
+    <index id="422" parent="334" name="login_UNIQUE">
       <ColNames>login</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="422" parent="334" name="PRIMARY">
+    <key id="423" parent="334" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idusuario</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="423" parent="334" name="login_UNIQUE">
+    <key id="424" parent="334" name="login_UNIQUE">
       <ColNames>login</ColNames>
       <UnderlyingIndexName>login_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="424" parent="335" name="idusuario_permiso">
+    <column id="425" parent="335" name="idusuario_permiso">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="425" parent="335" name="idusuario">
+    <column id="426" parent="335" name="idusuario">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="426" parent="335" name="idpermiso">
+    <column id="427" parent="335" name="idpermiso">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="427" parent="335" name="fk_usuario_permiso_usuario_idx">
+    <index id="428" parent="335" name="fk_usuario_permiso_usuario_idx">
       <ColNames>idusuario</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="428" parent="335" name="fk_usuario_permiso_permiso_idx">
+    <index id="429" parent="335" name="fk_usuario_permiso_permiso_idx">
       <ColNames>idpermiso</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="429" parent="335" name="PRIMARY">
+    <key id="430" parent="335" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idusuario_permiso</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="430" parent="335" name="fk_usuario_permiso_usuario">
+    <foreign-key id="431" parent="335" name="fk_usuario_permiso_usuario">
       <ColNames>idusuario</ColNames>
       <RefSchemaName>dwphp1</RefSchemaName>
       <RefTableName>usuario</RefTableName>
       <RefColNames>idusuario</RefColNames>
     </foreign-key>
-    <foreign-key id="431" parent="335" name="fk_usuario_permiso_permiso">
+    <foreign-key id="432" parent="335" name="fk_usuario_permiso_permiso">
       <ColNames>idpermiso</ColNames>
       <RefSchemaName>dwphp1</RefSchemaName>
       <RefTableName>permiso</RefTableName>
       <RefColNames>idpermiso</RefColNames>
     </foreign-key>
-    <column id="432" parent="336" name="idventa">
+    <column id="433" parent="336" name="idventa">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="433" parent="336" name="idcliente">
+    <column id="434" parent="336" name="idcliente">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="434" parent="336" name="idusuario">
+    <column id="435" parent="336" name="idusuario">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="435" parent="336" name="tipo_comprobante">
+    <column id="436" parent="336" name="tipo_comprobante">
       <Position>4</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="436" parent="336" name="serie_comprobante">
+    <column id="437" parent="336" name="serie_comprobante">
       <Position>5</Position>
       <DataType>varchar(7)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="437" parent="336" name="num_comprobante">
+    <column id="438" parent="336" name="num_comprobante">
       <Position>6</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="438" parent="336" name="fecha_hora">
+    <column id="439" parent="336" name="fecha_hora">
       <Position>7</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="439" parent="336" name="impuesto">
+    <column id="440" parent="336" name="impuesto">
       <Position>8</Position>
       <DataType>decimal(4,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="440" parent="336" name="total_venta">
+    <column id="441" parent="336" name="total_venta">
       <Position>9</Position>
       <DataType>decimal(11,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="441" parent="336" name="estado">
+    <column id="442" parent="336" name="estado">
       <Position>10</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="442" parent="336" name="fk_venta_persona_idx">
+    <index id="443" parent="336" name="fk_venta_persona_idx">
       <ColNames>idcliente</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="443" parent="336" name="fk_venta_usuario_idx">
+    <index id="444" parent="336" name="fk_venta_usuario_idx">
       <ColNames>idusuario</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="444" parent="336" name="PRIMARY">
+    <key id="445" parent="336" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idventa</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="445" parent="336" name="fk_venta_persona">
+    <foreign-key id="446" parent="336" name="fk_venta_persona">
       <ColNames>idcliente</ColNames>
       <RefSchemaName>dwphp1</RefSchemaName>
       <RefTableName>persona</RefTableName>
       <RefColNames>idpersona</RefColNames>
     </foreign-key>
-    <foreign-key id="446" parent="336" name="fk_venta_usuario">
+    <foreign-key id="447" parent="336" name="fk_venta_usuario">
       <ColNames>idusuario</ColNames>
       <RefSchemaName>dwphp1</RefSchemaName>
       <RefTableName>usuario</RefTableName>
