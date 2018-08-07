@@ -6,7 +6,7 @@
       <synchronize>true</synchronize>
       <remarks>dwphp1@192.168.0.9</remarks>
       <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mariadb://192.168.0.9:3306/dwphp1</jdbc-url>
+      <jdbc-url>jdbc:mariadb://192.168.0.10:3306/dwphp1</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />

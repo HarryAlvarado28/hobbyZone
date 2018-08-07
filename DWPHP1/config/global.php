@@ -1,6 +1,6 @@
 <?php 
 //Ip de la pc servidor de base de datos
-define("DB_HOST","192.168.0.9");
+define("DB_HOST","192.168.0.10");
 
 //Nombre de la base de datos
 define("DB_NAME", "dwphp1");
