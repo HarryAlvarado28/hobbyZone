@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BodyComponent implements OnInit {
 
-  constructor() { }
+  mostrar = true;
 
-  ngOnInit() {
+  frase: any = {
+    mensaje: 'El conocimiento es poder!',
+    autor: 'Yo mismo'
   }
 
+  peliculas: string[] = ['La Liga de la Justicia', 'Los Vengadores','Superman', 'Dios no esta muerto', 'La era del Hielo','Busqueda Implacable'];
 }
