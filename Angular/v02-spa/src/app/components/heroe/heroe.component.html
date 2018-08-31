@@ -1,6 +1,6 @@
 <h1>
-  {{heroes.nombre}}
-  <small>{{heroes.aparicion}}</small>
+  {{heroes.nombre | uppercase}}
+  <small>({{heroes.aparicion | date:'y'}})</small>
 </h1>
 <hr>
 <div class="row animated fadeIn">

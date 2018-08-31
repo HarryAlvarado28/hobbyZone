@@ -13,20 +13,11 @@ export class HeroeComponent{
   heroes:any = {};
 
   constructor(private activatedRoute: ActivatedRoute, private _heroesService:HeroesService) {
-    this.activatedRoute.params.subscribe( params => {
+
+    this.activatedRoute.params.subscribe(params => {
       console.log(params['id']);
       this.heroes = this._heroesService.getHeroe(params['id']);
       console.log(this.heroes);
     });
   }
-
-  getcasa(casa:string): string{
-    if (casa == 'Marvel'){
-      return true;
-    }else{
-      return false;
-    }
-  }
-
-
 }
