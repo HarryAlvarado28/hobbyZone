@@ -1,12 +1,17 @@
 import {Component} from "@angular/core";
-import {NavController} from "ionic-angular";
+import {DeseosService} from "../../services/deseos.service";
+import {Lista} from "../../models";
 
 @Component({
   selector: 'page-terminados',
   templateUrl: 'terminados.component.html'
 })
 export class TerminadosPage {
-  constructor(public navCtrl: NavController) {
+  constructor(public deseosService: DeseosService) {
 
+  }
+
+  listaSeleccionada(lista: Lista){
+    console.log(lista);
   }
 }

@@ -11,13 +11,17 @@ import { TerminadosPage } from "../pages/terminados/terminados.component";
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { DeseosService } from "../services/deseos.service";
+import {AgregarPage} from "../pages/agregar/agregar.component";
+
 @NgModule({
   declarations: [
     MyApp,
     AboutPage,
     TabsPage,
     PendientesPage,
-    TerminadosPage
+    TerminadosPage,
+    AgregarPage
   ],
   imports: [
     BrowserModule,
@@ -29,11 +33,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     TabsPage,
     PendientesPage,
-    TerminadosPage
+    TerminadosPage,
+    AgregarPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    DeseosService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
