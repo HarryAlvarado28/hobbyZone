@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar color="primary">
-    <ion-title>Lista sin nombre</ion-title>
+    <ion-title>{{ lista.titulo }}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -13,7 +13,7 @@
   <ion-list>
     <ion-item>
       <ion-label floating>Nuevo Item</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input [(ngModel)]="nombreItem" type="text"></ion-input>
     </ion-item>
   </ion-list>
 
@@ -23,4 +23,5 @@
       Salvar el mundo
     </button>
   </ion-list>
+
 </ion-content>
