@@ -18,10 +18,6 @@ export class PendientesPage {
 
   }
 
-  listaSeleccionada(lista: Lista){
-    console.log(lista);
-  }
-
   agregarLista(){
     //this.navCtrl.push(AgregarPage);
     const alert = this.alertCtrl.create({
@@ -37,7 +33,7 @@ export class PendientesPage {
         text: 'Agregar',
         handler: data => {
           console.log(data);
-          if(data.titulo.legth === 0){
+          if(data.titulo.length === 0){
            return;
           }
           this.navCtrl.push(AgregarPage,{
@@ -49,4 +45,5 @@ export class PendientesPage {
 
     alert.present();
   }
+
 }

@@ -12,7 +12,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { DeseosService } from "../services/deseos.service";
-import {AgregarPage} from "../pages/agregar/agregar.component";
+import { AgregarPage } from "../pages/agregar/agregar.component";
+import { FiltroCompletadoPipe } from "../pipes/filtro-completado/filtro-completado";
+import { ListasComponent } from "../components/listas.component";
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import {AgregarPage} from "../pages/agregar/agregar.component";
     TabsPage,
     PendientesPage,
     TerminadosPage,
-    AgregarPage
+    AgregarPage,
+    FiltroCompletadoPipe,
+    ListasComponent
   ],
   imports: [
     BrowserModule,
