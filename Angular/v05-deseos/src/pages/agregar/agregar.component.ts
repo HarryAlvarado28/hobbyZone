@@ -52,7 +52,7 @@ export class AgregarPage {
       this.lista.terminadaEn = new Date();
     }else{
       this.lista.terminada = true;
-      this.lista.terminadaEn = false;
+      this.lista.terminadaEn = null;
     }
 
     this.deseosService.guardarStorage();
@@ -63,4 +63,11 @@ export class AgregarPage {
     this.deseosService.guardarStorage();
   }
 
+  improvisado(lista: Lista){
+    if(lista.items.length > 0){
+      return true;
+    }else{
+      return false;
+    }
+  }
 }

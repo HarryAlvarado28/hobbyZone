@@ -16,9 +16,8 @@
       <ion-input [(ngModel)]="nombreItem" type="text" (keyup.enter)="agregarItem()"></ion-input>
     </ion-item>
   </ion-list>
-
   <ion-list>
-    <ion-list-header *ngIf="lista.items.length > 0">
+    <ion-list-header *ngIf="improvisado(lista)">
       Tareas por hacer
     </ion-list-header>
     <ion-item-sliding class="animated fadeInDown" *ngFor="let item of lista.items; let i = index">

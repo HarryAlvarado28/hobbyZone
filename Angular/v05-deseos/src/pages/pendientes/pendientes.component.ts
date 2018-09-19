@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import {DeseosService} from "../../services/deseos.service";
-import {Lista} from "../../models";
+//import {Lista} from "../../models";
 import {AlertController, NavController} from "ionic-angular";
 import {AgregarPage} from "../agregar/agregar.component";
 
