@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+###  Backend con Ruby on Rails en 5 minutos
 
-Things you may want to cover:
+Instrucciones básicas para la generación del backend.
 
-* Ruby version
+$ Rails new flosspa
+$ Cd flosspa
+$ Rails generate scaffold farmer name:string email:string phone_number:integer image:string is_active:boolean
+$ Rake db:migrate
+$ Rake routes
+$ Rails s
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Más información railsinstaller.org
