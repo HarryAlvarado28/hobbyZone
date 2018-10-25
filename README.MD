@@ -1,3 +1,3 @@
 ## HOBBYZONE
 
-Es un repositorio que recopilara proyectos realizados para aprender un poco más de otras tecnológicas, estos proyectos varios de ellos pueden ser de cursos que se han tomado.
+Esta parte del repositorio es utilizado para alojar tareas, talleres o prácticas de curso que se se estarán tomando, nos podemos topar con variedades de mini-programas.
