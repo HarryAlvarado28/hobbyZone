@@ -51,6 +51,17 @@
   </div>
 
   <div class="form-group row">
+    <label class="col-2 col-form-label">Username</label>
+    <div class="col-md-8">
+
+      <input class="form-control"
+             type="text"
+             formControlName="username"
+             placeholder="Usuario">
+    </div>
+  </div>
+
+  <div class="form-group row">
     <label class="col-2 col-form-label">Password</label>
     <div class="col-md-8">
 
@@ -101,9 +112,10 @@
       </button>
     </div>
   </div>
-{{forma.valid}}
+  {{forma.valid}}
+  <br>
+  {{forma.status}}
 </form>
-
 
 <pre>
   {{usuario| json}}
