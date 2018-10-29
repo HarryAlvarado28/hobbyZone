@@ -50,6 +50,48 @@
     </div>
   </div>
 
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Password</label>
+    <div class="col-md-8">
+
+      <input class="form-control"
+             type="password"
+             formControlName="password1"
+             placeholder="Password">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Repetir</label>
+    <div class="col-md-8">
+
+      <input class="form-control"
+             type="password"
+             formControlName="password2"
+             placeholder="Repetir contraseña">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Pasatiempos</label>
+    <div class="col-md-8" formArrayName="pasatiempos">
+
+      <input
+        class="form-control"
+        *ngFor="let pasatiempo of forma.controls['pasatiempos'].controls; let i = index"
+        [formControlName]="i"
+        type="text">
+      
+    </div>
+
+    <button type="button"
+            (click)="agregarPasatiempo()"
+            class="btn btn-primary">
+      Nuevo
+    </button>
+
+  </div>
+
 
   <div class="form-group row">
     <label class="col-2 col-form-label">&nbsp;</label>

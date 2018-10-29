@@ -28,7 +28,7 @@ export class TemplateComponent {
     {
       codigo: "RUS",
       nombre: "Rusia"
-    }]
+    }];
 
   sexos:string[] = ["Hombre","Mujer"];
 

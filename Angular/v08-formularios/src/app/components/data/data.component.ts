@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
-import {validate} from 'codelyzer/walkerFactory/walkerFn';
+import {FormGroup, FormControl, Validators, FormArray} from '@angular/forms';
+import {FromEventTarget} from 'rxjs/internal/observable/fromEvent';
 
 @Component({
   selector: 'app-data',
@@ -16,9 +16,9 @@ export class DataComponent {
       nombre: "Harry",
       apellido: "Alvarado"
     },
-    correo: "harry.alvarado@up.ac.pa"
+    correo: "harry.alvarado@up.ac.pa",
+    pasatiempos: ["Correr", "Dormir", "Comer"]
   }
-
 
   constructor() {
 
@@ -35,18 +35,62 @@ export class DataComponent {
             ]),
           'apellido': new FormControl(
             '',
-            Validators.required)
+            [
+              Validators.required,
+              this.noHerrera
+            ])
         }),
       'correo': new FormControl('',
               [
                 Validators.required,
                 Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}$")
-              ])
-    })
+              ]),
+      'pasatiempos': new FormArray([
+        new FormControl('Correr', Validators.required)
+      ]),
+
+      'password1': new FormControl('',Validators.required),
+      'password2': new FormControl()
+    });
 
     // setear valores en el formulario
-      this.forma.setValue(this.usuario);
+      //this.forma.setValue(this.usuario);
+      this.forma.controls['password2'].setValidators([
+        Validators.required,
+        this.noIgual.bind(this.forma)
+        /*
+          como el this se encuentra fuera de contexto
+          lo que realizamos es un bind para que el objeto
+          forma se pueda funcionar en la función noIgual
+        */
+      ])
+  }
 
+  agregarPasatiempo(){
+    (<FormArray>this.forma.controls['pasatiempos']).push(new FormControl('', Validators.required))
+  }
+
+
+  noHerrera(control:FormControl): {[s:string]:boolean} {
+    if(control.value === "herrera"){
+      return {
+        noherrera:true
+      }
+    }
+
+    return null;
+  }
+
+  noIgual(control:FormControl): {[s:string]:boolean} {
+    let forma:any = this;
+
+    if( control.value !== forma.controls['password1'].value){
+      return {
+        noiguales:true
+      }
+    }
+
+    return null;
   }
 
   guardarCambios(){
@@ -66,7 +110,6 @@ export class DataComponent {
             apellido: ""
           }, correo: ""
         });
-
-  }
+    }
 
 }
