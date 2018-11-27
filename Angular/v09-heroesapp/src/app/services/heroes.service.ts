@@ -38,4 +38,23 @@ export class HeroesService {
     );
   }
 
+  getHeroe(key$:string){
+    let url = `${this.heroeURL}${key$}.json`;
+    return this.httpas.get(url).pipe(
+      map( res => {return res;})
+    );
+  }
+
+  getHeroes(){
+      return this.httpas.get(this.heroesURL).pipe(
+      map( res => {return res;})
+    );
+  }
+
+  borrarHeroe(key$:string){
+    let url = `${this.heroeURL}${key$}.json`;
+    return this.httpas.delete(url).pipe(
+      map(res => {return res;})
+    );
+  }
 }
