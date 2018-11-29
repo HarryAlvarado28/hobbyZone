@@ -34,6 +34,7 @@ export class ChatService {
     this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
   }
   logout() {
+    this.usuario = {};
     this.afAuth.auth.signOut();
   }
 
