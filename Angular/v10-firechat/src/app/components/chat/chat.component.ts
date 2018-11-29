@@ -12,8 +12,8 @@ export class ChatComponent implements OnInit {
 
   elemento: any;
 
-  constructor(public _sc: ChatService) {
-    this._sc.cargarMensajes().subscribe( () => {
+  constructor(public _cs: ChatService) {
+    this._cs.cargarMensajes().subscribe( () => {
         setTimeout( () =>{
         this.elemento.scrollTop = this.elemento.scrollHeight;
       }, 200);
@@ -27,7 +27,7 @@ export class ChatComponent implements OnInit {
     if (this.mensaje.length === 0) {
         return;
     }
-    this._sc.agregarMensaje(this.mensaje).then(
+    this._cs.agregarMensaje(this.mensaje).then(
       () => this.mensaje = ""
     ).catch(
       (err) => console.log('Error al enviar',err)
